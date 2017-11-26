@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background: url("../img/bg1.png");
+    background-size: cover;
+    overflow: hidden;
+}
+.login-block {
+    height: 286px;
+    width: 343px;
+    margin: 230px 0 0 75px;
+    background-color: rgba(255, 255, 255, 0.5);
+    overflow: hidden;
+}
+.input {
+    position: relative;
+    width: 272px;
+    height: 55px;
+    border: 2px rgb(175, 175, 175) solid;
+    margin: 25px auto;
+    padding: 5px;
+    border-radius: 10px;
+    text-align: left;
+    display: block;
+}
+
+.login {
+    background-color: rgb(36, 169, 225);
+    color: white;
+    height: 48px;
+    width: 184px;
+    border: none;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    cursor: pointer;
+}
+.login a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+    display: block;
+}
+.forget {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+}
+.forget p {
+    display: inline;
+}
+.forget a {
+    display: inline;
+    text-decoration: underline;
+}
+.playbar {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+}

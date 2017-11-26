@@ -1,0 +1,397 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+html, body {
+    padding: 0;
+    height: 100%;
+}
+body {
+    background-color: rgb(233, 233, 233);
+}
+.navbar {
+    overflow: hidden;
+    background-color: rgb(36, 169, 225);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-radius: 0 0 5px 5px;
+    z-index: 1;
+}
+.navbar a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+}
+.navbar-item > a:hover:not(.active) {
+    cursor: pointer;
+    animation-duration: 2s;
+    animation-name: changeColor;
+}
+@keyframes changeColor {
+    0% {
+        background-color: rgb(36, 169, 225);
+    }
+    100% {
+        background-color: rgb(44, 141, 232);
+    }
+}
+a.active {
+    background-color: rgb(44, 141, 232);
+}
+.navbar-title {
+    float: left;
+}
+.title {
+    color: white;
+    margin: 0 45px 0 30px;
+    font-size: 42px;
+    font-family: "SnellRoundhand Script";
+    font-weight: bold;
+    cursor: default;
+}
+.navbar-body {
+    float: left;
+}
+.navbar-content {
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    float: left;
+}
+.dropdown {
+    display: none;
+    position: fixed;
+    left: 60px;
+    top: 50px;
+    background-color: rgb(44, 141, 232);
+    z-index: 1;
+}
+.dropdown a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: inline-block;
+    text-align: left;
+}
+.drop:hover .dropdown {
+    display: block;
+}
+.navbar-account {
+    float: right;
+}
+.navbar-item {
+    float: left;
+}
+.icon, .settings {
+    float: left;
+}
+
+.search {
+    position: relative;
+    width: 40%;
+    height: 55px;
+    margin: 90px auto 30px;
+    border: 2px rgb(151, 151, 151) solid;
+    border-radius: 25px;
+    text-align: center;
+    cursor: text;
+    display: block;
+    font-size: 1.5em;
+    color: rgb(151, 151, 151);
+}
+.block {
+    position: relative;
+    margin: 60px 90px;
+    overflow: hidden;
+}
+.block-title {
+    text-align: center;
+}
+.grid {
+    position: relative;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 3%;
+    overflow: hidden;
+}
+.music {
+    position: relative;
+}
+.cover-layer {
+    width: 250px;
+    height: 250px;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgb(36, 169, 225);
+}
+.cover {
+    width: 250px;
+    height: 250px;
+    transition: 0.5s ease-out;
+}
+.cover:hover {
+    transform: scale(1.2);
+    transition: 1s ease-in;
+}
+.text-layer {
+    margin: 15px auto;
+    position: relative;
+    width: 250px;
+}
+.intro {
+    color: rgb(151, 151, 151);
+}
+.info {
+    padding: 100px 12.5% 0;
+    overflow: hidden;
+}
+.info > div {
+    float: left;
+}
+
+.info-layer {
+    width: 65%;
+    margin-left: 75px;
+}
+.info-layer > div {
+    position: relative;
+}
+.heading {
+    font-weight: 500;
+    margin-bottom: 20px;
+    font-size: 3em;
+}
+.subtitle {
+    display: inline;
+    margin-right: 20px;
+    font-weight: 200;
+    font-size: 1.5em;
+}
+.detail {
+    position: relative;
+    margin-top: 20px;
+    font-weight: 100;
+    line-height: 1.4em;
+    height: 2.8em;
+    overflow: hidden;
+}
+.expand {
+    position: relative;
+    cursor: pointer;
+    font-weight: 600;
+}
+.option-set {
+    position: relative;
+    margin-top: 32px;
+}
+.option {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 1.7em;
+    margin-right: 10px;
+}
+.option:hover {
+    transform: translateY(-5px);
+    transition: 0.5s;
+}
+.play:before {
+    content: "";
+    font-family: "Segoe MDL2 Assets";
+}
+.like:before {
+    content: "";
+    font-family: "Segoe MDL2 Assets";
+}
+.download:before {
+    content: '';
+    font-family: "Segoe MDL2 Assets";
+}
+.share:before {
+    content: '';
+    font-family: "Segoe MDL2 Assets";
+}
+.prev-footer:before {
+    content: '';
+    font-family: "Segoe MDL2 Assets";
+    color: white;
+}
+.play-footer:before {
+    content: "";
+    font-family: "Segoe MDL2 Assets";
+    color: white;
+    font-size: 1.2em;
+}
+.pause-footer:before {
+    content: "";
+    font-family: "Segoe MDL2 Assets";
+    color: white;
+    font-size: 1.2em;
+}
+.next-footer:before {
+    content: '';
+    font-family: "Segoe MDL2 Assets";
+    color: white;
+}
+.playlist {
+    background-color: white;
+    position: relative;
+    margin: 50px 10% 0;
+    padding: 5px 5% 10px;
+}
+.selection {
+    margin: 10px auto;
+    height: 40px;
+    border-bottom: 1px solid rgb(225, 225, 225);
+}
+.selection > button {
+    display: inline;
+    font-size: 1.2em;
+    margin-right: 20px;
+    border: none;
+    cursor: pointer;
+    height: 100%;
+}
+.songs {
+    background-color: rgb(225, 225, 225);
+    color: black;
+}
+.comments {
+    background-color: white;
+    color: rgb(144, 144, 144);
+}
+.music-area {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px auto;
+    display: table;
+}
+td, th {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid rgb(225, 225, 225);
+}
+
+tr:nth-child(odd) {
+    background-color: rgb(225, 225, 225);
+}
+.comment-area {
+    display: none;
+}
+.other {
+    margin: 20px 10%;
+}
+.relative {
+    border-bottom: 1px solid white;
+    height: 35px;
+    font-size: 1.2em;
+}
+.playbar {
+    position: fixed;
+    bottom: 0;
+    height: 70px;
+    width: 100%;
+    background-color: rgba(151, 151, 151, 0.75);
+    border-radius: 5px 5px 0 0;
+    color: white;
+}
+.play-info {
+    overflow: hidden;
+}
+.image {
+    background: url("../img/a.jpg");
+    background-size: cover;
+    border-radius: 25px;
+    height: 50px;
+    width: 50px;
+    float: left;
+    margin: 10px 20px 0;
+    cursor: pointer;
+}
+.image:hover {
+    transition: 10s;
+    transform: rotate(360deg);
+}
+.info-footer {
+    float: left;
+    margin-top: 10px;
+}
+.singer-footer {
+    font-weight: 100;
+}
+.command {
+    margin: 15px auto 0;
+    width: 165px;
+}
+.time {
+    margin: -20px 80px 0 0;
+    float: right;
+}
+.progress-bar {
+    height: 2px;
+    width: 90%;
+    background-color: white;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+.progress {
+    display: block;
+    height: 3px;
+    width: 0;
+    background-color: rgb(44, 141, 232);
+}
+.collapse {
+    background: none;
+    border: none;
+    color: white;
+    position: fixed;
+    bottom: 15px;
+    right: 20px;
+}
+.collapse:before {
+    content: '';
+    font-family: "Segoe MDL2 Assets";
+    font-size: 2em;
+    cursor: pointer;
+}
+.fadein {
+    animation-duration: 1s;
+    animation-name: fadein;
+    animation-fill-mode: forwards;
+}
+@keyframes fadein {
+    from {
+        bottom: -70px;
+        visibility: hidden;
+    }
+    to {
+        bottom: 0;
+        visibility: visible;
+    }
+}
+.fadeout {
+    animation-duration: 1s;
+    animation-name: fadeout;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeout {
+    from {
+        bottom: 0;
+        visibility: visible;
+    }
+    to {
+        bottom: -70px;
+        visibility: hidden;
+    }
+}
+
